@@ -1,3 +1,3 @@
-export default () => {
-  return 'pop up';
-}
+define(['rxjs'],({Observable}) => {
+  return Observable.interval(300);
+})

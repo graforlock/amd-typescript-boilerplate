@@ -3,7 +3,7 @@ export const init = () =>  {
   button.textContent = 'Click me';
   button.addEventListener('click', () => {
     require(['popup'], function(popup) {
-      console.log(popup.default());
+      popup.subscribe(x => console.log(x));
     });
   });
   document.body.appendChild(button);
