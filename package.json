@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "AMD Typescript",
   "main": "index.js",
-  "publisher": "vscode",
-  "engines": { "vscode": "0.10.x" },
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
