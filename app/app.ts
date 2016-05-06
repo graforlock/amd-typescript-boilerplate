@@ -3,7 +3,9 @@ export const init = () =>  {
   button.textContent = 'Click me';
   button.addEventListener('click', () => {
     require(['popup'], function(popup) {
-      popup.subscribe(x => console.log(x));
+      let div = document.createElement('h5');
+      document.body.appendChild(div);
+      popup.subscribe(x => div.textContent = x);
     });
   });
   document.body.appendChild(button);
