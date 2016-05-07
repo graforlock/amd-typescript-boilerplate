@@ -1,4 +1,3 @@
-define(['rxjs'],({Observable}) => {
-  return Observable.interval(300)
-    .map(event => event*2);
-})
+define(['rxjs'],({Observable}) => (
+   Observable.interval(300)
+));

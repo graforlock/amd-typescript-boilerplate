@@ -1,7 +1,9 @@
-define('button',['rxjs'],({Observable}) => {
-    let button = document.createElement('button');
-    button.id = 'clicky-btn';
-    button.textContent = 'Click me';
-    document.body.appendChild(button);
-    return Observable.fromEvent(button, 'click');
-});
+import {Observable} from 'rxjs';
+
+let _button = document.createElement('button');
+_button.id = 'clicky-btn';
+_button.textContent = 'Click me';
+document.body.appendChild(_button);
+
+export const button = Observable.fromEvent(_button, 'click');
+
